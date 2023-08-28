@@ -1,0 +1,122 @@
+ :root{
+    --first: #191D88;
+    --second: #1450A3;
+    --third: #337CCF;
+    --fourth: #FFC436;
+    --fifth: #000000;
+ }
+*{
+    margin : 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+.container{
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #153677, #4e085f);
+    padding: 1rem;
+}
+.to-docontainer{
+    width: 100%;
+    /* max-width: 40%; */
+    background-color: var(--fifth);
+    margin: 5rem auto;
+    padding: 2rem 2rem 3rem;
+    border-radius: 3rem;
+}
+.to-docontainer h1{
+    color: white;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+.inputcontainer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: white;
+    border-radius: 2rem;
+    margin-bottom: 2.5rem;
+    padding-left: 1rem;
+}
+input{
+  flex: 1;
+  border: none;
+  outline: none;
+  background: transparent;
+  padding: 1rem;
+  color: black;
+  font-weight: 14px;
+}
+button{
+    border: none;
+    outline: none;
+    padding: 1rem 3rem;
+    background-color: orangered;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 2rem;
+}
+ul li{
+    list-style: none;
+    font-size: 17px;
+    padding: 0.6rem 0.6rem 0.6rem 3rem;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+    background-color: white;
+    color: black;
+    border-radius: 2rem;
+    margin-bottom: 0.8rem;
+}
+ul li::before{
+    content: '';
+    position: absolute;
+    height: 1.8rem;
+    width: 1.8rem;
+    border-radius: 2rem;
+    background-image: url(images/circle-regular.svg);
+    background-size: cover;
+    background-position: center;
+    top: 0.3rem;
+    left: 0.5rem;
+}
+ul li.checked{
+    text-decoration: line-through;
+}
+ul li.checked::before{
+    background-image: url(images/circle-check-regular.svg);
+}
+ul li span{
+    position: absolute;
+    right: 0;
+    top: 0rem;
+    width: 9%;
+    height: 100%;
+    font-size: 22px;
+    line-height: 2.5rem;
+    text-align: center;
+    border-radius: 3rem;
+    color: white;
+    background: orangered;
+}
+@media only screen and (max-width: 600px){
+    .inputcontainer{
+        padding-left: 0%;
+    }
+    .to-docontainer{
+        max-width: 100%;
+    }
+    button{
+        padding: 1rem 1rem;
+    }
+    ul li span{
+        width: 14%;
+    }
+}
+@media only screen and (min-width: 700px){
+    .to-docontainer{
+        max-width: 50%;
+    }
+}
